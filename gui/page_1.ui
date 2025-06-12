@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>957</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Page 1</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_gamenu">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>200</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Serif CJK KR SemiBold</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>GAME MENU</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>891</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Welcome to GREAT AND THE FUNNIEST GAME THAT IS DEFINETLY NOT BORING</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_rules">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>270</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>P052</family>
+      <pointsize>30</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>RULES</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_gamenu</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_gamenu_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>363</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>273</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rules</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_rules_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>572</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btn_gamenu_a()</slot>
+  <slot>btn_rules_a()</slot>
+ </slots>
+</ui>
