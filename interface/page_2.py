@@ -17,3 +17,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         with manager.image_gui_path():
             self.setupUi(self)
+    def btn_main_a(self):
+        manager.widget.setCurrentWidget(manager.screen1)
+        manager.widget.resize(960, 600)

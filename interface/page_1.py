@@ -18,6 +18,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         with manager.image_gui_path():
             self.setupUi(self)
     def btn_gamenu_a(self):
-         pass
+          manager.widget.setCurrentWidget(manager.screen3)
+          manager.widget.resize(1920, 1080)
     def btn_rules_a(self):
             manager.widget.setCurrentWidget(manager.screen2)
+            manager.widget.resize(1490, 620)

@@ -33,4 +33,4 @@ for variable_name in list_on_screens:
         value = globals()[variable_name]
         widget.addWidget(value)
 widget.resize(screen1.size())
-widget.setWindowTitle(screen1.windowTitle());
+widget.setWindowTitle(screen1.windowTitle())
