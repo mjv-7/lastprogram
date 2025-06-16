@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>957</width>
-    <height>600</height>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -74,6 +74,50 @@
      <string>RULES</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>951</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/desert.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_exit">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>340</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>P052</family>
+      <pointsize>30</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>btn_gamenu</zorder>
+   <zorder>label</zorder>
+   <zorder>btn_rules</zorder>
+   <zorder>btn_exit</zorder>
   </widget>
  </widget>
  <resources/>
@@ -110,9 +154,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_exit_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-59</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btn_gamenu_a()</slot>
   <slot>btn_rules_a()</slot>
+  <slot>btn_exit_a()</slot>
  </slots>
 </ui>

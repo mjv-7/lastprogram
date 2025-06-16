@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(957, 600)
+        MainWindow.resize(957, 597)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.btn_gamenu = QPushButton(self.centralwidget)
@@ -47,11 +47,26 @@ class Ui_MainWindow(object):
         font2.setPointSize(30)
         font2.setItalic(True)
         self.btn_rules.setFont(font2)
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(0, 0, 951, 601))
+        self.label_2.setPixmap(QPixmap(u"../images/desert.png"))
+        self.label_2.setScaledContents(True)
+        self.btn_exit = QPushButton(self.centralwidget)
+        self.btn_exit.setObjectName(u"btn_exit")
+        self.btn_exit.setGeometry(QRect(350, 340, 231, 61))
+        self.btn_exit.setFont(font2)
         MainWindow.setCentralWidget(self.centralwidget)
+        self.label_2.raise_()
+        self.btn_gamenu.raise_()
+        self.label.raise_()
+        self.btn_rules.raise_()
+        self.btn_exit.raise_()
 
         self.retranslateUi(MainWindow)
         self.btn_gamenu.clicked.connect(MainWindow.btn_gamenu_a)
         self.btn_rules.clicked.connect(MainWindow.btn_rules_a)
+        self.btn_exit.clicked.connect(MainWindow.btn_exit_a)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -61,5 +76,7 @@ class Ui_MainWindow(object):
         self.btn_gamenu.setText(QCoreApplication.translate("MainWindow", u"GAME MENU", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Welcome to GREAT AND THE FUNNIEST GAME THAT IS DEFINETLY NOT BORING", None))
         self.btn_rules.setText(QCoreApplication.translate("MainWindow", u"RULES", None))
+        self.label_2.setText("")
+        self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"EXIT", None))
     # retranslateUi
 
