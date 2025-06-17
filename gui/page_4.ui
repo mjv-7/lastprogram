@@ -7,18 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>1145</width>
-    <height>770</height>
+    <height>769</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Page 1</string>
+   <string>whack-A-mole</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="lbl_player">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>630</y>
+      <x>30</x>
+      <y>660</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -33,8 +33,125 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_whack">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>440</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(&quot;images/chip.png&quot;);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_ppoint">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Points:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1145</width>
+      <height>770</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/mole.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_start">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>50</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>lbl_player</zorder>
+   <zorder>btn_whack</zorder>
+   <zorder>lbl_ppoint</zorder>
+   <zorder>btn_start</zorder>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btn_whack</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_whack_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>508</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_start</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_start_a()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1042</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1175</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btn_whack_a()</slot>
+  <slot>btn_start_a()</slot>
+ </slots>
 </ui>

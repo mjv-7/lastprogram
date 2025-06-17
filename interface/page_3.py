@@ -36,6 +36,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
          
         if self.collision(self.lbl_player, self.lbl_mole):
          manager.widget.setCurrentWidget(manager.screen4)
+         manager.widget.resize(1145, 770)
+         
     def keyPressEvent(self, event):
         self.key_press.append(event.key())
     def keyReleaseEvent(self, event):
