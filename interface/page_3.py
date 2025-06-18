@@ -25,7 +25,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.start(5)
         self.key_press=[]
         self.speed=1
-        self.lbl_player.move(950, 990)
+        
     def btn_main_a(self):
         manager.widget.setCurrentWidget(manager.screen1)
         manager.widget.resize(960, 600)
@@ -36,7 +36,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
          
         if self.collision(self.lbl_player, self.lbl_mole):
          manager.widget.setCurrentWidget(manager.screen4)
-         manager.widget.resize(1145, 770)
+         manager.widget.resize(1280, 720)
+         self.lbl_player.move(950, 990)
+         self.key_press.clear()
          #1280 by 720
          
     def keyPressEvent(self, event):

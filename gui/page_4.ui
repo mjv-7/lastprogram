@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1145</width>
-    <height>769</height>
+    <width>1280</width>
+    <height>717</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,8 +36,8 @@
    <widget class="QPushButton" name="btn_whack">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>360</y>
+      <x>860</x>
+      <y>330</y>
       <width>71</width>
       <height>51</height>
      </rect>
@@ -76,8 +76,8 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1145</width>
-      <height>770</height>
+      <width>1280</width>
+      <height>720</height>
      </rect>
     </property>
     <property name="text">
@@ -93,8 +93,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="btn_start">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>50</y>
+      <x>1100</x>
+      <y>30</y>
       <width>141</width>
       <height>51</height>
      </rect>

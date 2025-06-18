@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'page_4.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.9.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1145, 769)
+        MainWindow.resize(1280, 717)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.lbl_player = QLabel(self.centralwidget)
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.lbl_player.setScaledContents(True)
         self.btn_whack = QPushButton(self.centralwidget)
         self.btn_whack.setObjectName(u"btn_whack")
-        self.btn_whack.setGeometry(QRect(760, 360, 71, 51))
+        self.btn_whack.setGeometry(QRect(860, 330, 71, 51))
         self.btn_whack.setStyleSheet(u"background-image: url(\"images/chip.png\");")
         self.lbl_ppoint = QLabel(self.centralwidget)
         self.lbl_ppoint.setObjectName(u"lbl_ppoint")
@@ -44,12 +44,12 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(0, 0, 1145, 770))
+        self.label.setGeometry(QRect(0, 0, 1280, 720))
         self.label.setPixmap(QPixmap(u"../images/mole.png"))
         self.label.setScaledContents(True)
         self.btn_start = QPushButton(self.centralwidget)
         self.btn_start.setObjectName(u"btn_start")
-        self.btn_start.setGeometry(QRect(960, 50, 141, 51))
+        self.btn_start.setGeometry(QRect(1100, 30, 141, 51))
         font1 = QFont()
         font1.setPointSize(20)
         self.btn_start.setFont(font1)

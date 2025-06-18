@@ -22,7 +22,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.ppoint = 0
         self.tries = 0
         self.max_points = 5
-        self.max_tries = 10  # Number of chances to click the mole
+        self.max_tries = 8 # Number of chances to click the mole
+        self.all = [self.ppoint, self.tries, self.max_points, self.max_tries]
 
         # Timer
         self.timer = QTimer()
@@ -30,14 +31,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.timeout.connect(self.move_mole)
 
         # Positions (slot index: [x, y])
-        self.positions = {
-            1: [270, 440],
-            2: [320, 350],
-            3: [540, 350],
-            4: [540, 450],
-            5: [800, 450],
-            6: [760, 360]
-        }
+        self.positions = {1: [310, 420],  2: [360, 330],  3: [610, 330],  4: [610, 420], 5: [900, 420], 6: [860, 330]}
 
         # Button setup
         self.btn_whack.setVisible(False)
@@ -69,7 +63,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_whack.setVisible(True)
 
     def btn_whack_a(self):
-        self.ppoint += 1
+        print("Whack!")
+        self.ppoint += 0.5
         self.lbl_ppoint.setText(f"Points: {self.ppoint}")
         self.btn_whack.setVisible(False)
 
@@ -80,3 +75,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # Simulate moving to screen 3
             manager.widget.setCurrentWidget(manager.screen3)  # Replace with your screen switch function
             manager.widget.resize(1920, 1080)
+            self.all = 0 # Reset all values
+            self.btn_start.setVisible(True)
+            
