@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.lbl_player.setScaledContents(True)
         self.btn_whack = QPushButton(self.centralwidget)
         self.btn_whack.setObjectName(u"btn_whack")
-        self.btn_whack.setGeometry(QRect(540, 440, 71, 51))
+        self.btn_whack.setGeometry(QRect(760, 360, 71, 51))
         self.btn_whack.setStyleSheet(u"background-image: url(\"images/chip.png\");")
         self.lbl_ppoint = QLabel(self.centralwidget)
         self.lbl_ppoint.setObjectName(u"lbl_ppoint")

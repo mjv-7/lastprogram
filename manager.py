@@ -9,6 +9,7 @@ import interface.page_1
 import interface.page_2 
 import interface.page_3
 import interface.page_4
+import interface.page_5
 
 def start():
     widget.show()
@@ -28,6 +29,7 @@ screen1 = interface.page_1.MainWindow()
 screen2 = interface.page_2.MainWindow()
 screen3 = interface.page_3.MainWindow()
 screen4 = interface.page_4.MainWindow()
+screen5 = interface.page_5.MainWindow()
 list_on_screens = list(globals())
 widget = QStackedWidget()
 for variable_name in list_on_screens:

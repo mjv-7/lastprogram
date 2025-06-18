@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(-10, 0, 1920, 1080))
+        self.label.setGeometry(QRect(0, 0, 1920, 1080))
         self.label.setPixmap(QPixmap(u"../images/games.png"))
         self.label.setScaledContents(True)
         self.btn_main = QPushButton(self.centralwidget)

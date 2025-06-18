@@ -36,8 +36,8 @@
    <widget class="QPushButton" name="btn_whack">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>440</y>
+      <x>760</x>
+      <y>360</y>
       <width>71</width>
       <height>51</height>
      </rect>
