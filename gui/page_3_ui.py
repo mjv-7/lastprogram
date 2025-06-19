@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'page_3.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.9.0
+## Created by: Qt User Interface Compiler version 6.8.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1920, 1080)
+        MainWindow.resize(1920, 1075)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
@@ -68,6 +68,33 @@ class Ui_MainWindow(object):
         self.lbl_slots = QLabel(self.centralwidget)
         self.lbl_slots.setObjectName(u"lbl_slots")
         self.lbl_slots.setGeometry(QRect(1750, 520, 54, 51))
+        self.lbl_w1 = QLabel(self.centralwidget)
+        self.lbl_w1.setObjectName(u"lbl_w1")
+        self.lbl_w1.setGeometry(QRect(730, 370, 211, 61))
+        self.lbl_w2 = QLabel(self.centralwidget)
+        self.lbl_w2.setObjectName(u"lbl_w2")
+        self.lbl_w2.setGeometry(QRect(570, 290, 31, 41))
+        self.lbl_w3 = QLabel(self.centralwidget)
+        self.lbl_w3.setObjectName(u"lbl_w3")
+        self.lbl_w3.setGeometry(QRect(610, 310, 54, 51))
+        self.lbl_w4 = QLabel(self.centralwidget)
+        self.lbl_w4.setObjectName(u"lbl_w4")
+        self.lbl_w4.setGeometry(QRect(640, 330, 54, 51))
+        self.lbl_w7 = QLabel(self.centralwidget)
+        self.lbl_w7.setObjectName(u"lbl_w7")
+        self.lbl_w7.setGeometry(QRect(1250, 310, 54, 51))
+        self.lbl_w6 = QLabel(self.centralwidget)
+        self.lbl_w6.setObjectName(u"lbl_w6")
+        self.lbl_w6.setGeometry(QRect(1210, 270, 54, 51))
+        self.lbl_w5 = QLabel(self.centralwidget)
+        self.lbl_w5.setObjectName(u"lbl_w5")
+        self.lbl_w5.setGeometry(QRect(1230, 370, 141, 61))
+        self.lbl_w8 = QLabel(self.centralwidget)
+        self.lbl_w8.setObjectName(u"lbl_w8")
+        self.lbl_w8.setGeometry(QRect(1170, 210, 54, 51))
+        self.lbl_w9 = QLabel(self.centralwidget)
+        self.lbl_w9.setObjectName(u"lbl_w9")
+        self.lbl_w9.setGeometry(QRect(1180, 230, 54, 51))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -87,5 +114,14 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Level 3", None))
         self.lbl_spin.setText("")
         self.lbl_slots.setText("")
+        self.lbl_w1.setText("")
+        self.lbl_w2.setText("")
+        self.lbl_w3.setText("")
+        self.lbl_w4.setText("")
+        self.lbl_w7.setText("")
+        self.lbl_w6.setText("")
+        self.lbl_w5.setText("")
+        self.lbl_w8.setText("")
+        self.lbl_w9.setText("")
     # retranslateUi
 

@@ -4,7 +4,7 @@
 
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import manager
+import manager, interface
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import QTimer,QRect
 from PySide6.QtCore import Qt   
@@ -25,6 +25,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.start(5)
         self.key_press=[]
         self.speed=1
+        self.walls = [self.lbl_w1,self.lbl_w2,self.lbl_w3,self.lbl_w4,self.lbl_w5,self.lbl_w6,self.lbl_w7,self.lbl_w8,self.lbl_w9]
         
     def btn_main_a(self):
         manager.widget.setCurrentWidget(manager.screen1)
@@ -33,18 +34,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         move_x = ((Qt.Key.Key_D in self.key_press) * self.speed) + ((Qt.Key.Key_A in self.key_press)* -self.speed)
         move_y = ((Qt.Key.Key_W in self.key_press) * -self.speed) + ((Qt.Key.Key_S in self.key_press)* self.speed)
         self.lbl_player.move(self.lbl_player.x()+move_x,self.lbl_player.y()+move_y)
-         
+
+        for wall in self.walls:
+            if self.collision(self.lbl_player, wall):
+                self.lbl_player.move(self.lbl_player.x()-move_x,self.lbl_player.y()-move_y)
+
         if self.collision(self.lbl_player, self.lbl_mole):
          manager.widget.setCurrentWidget(manager.screen4)
          manager.widget.resize(1280, 720)
          self.lbl_player.move(950, 990)
          self.key_press.clear()
-         #1280 by 720
          
     def keyPressEvent(self, event):
         self.key_press.append(event.key())
     def keyReleaseEvent(self, event):
-       self.key_press.remove(event.key())
+       if self.key_press:
+            self.key_press.remove(event.key())
     def collision(self, object1, object2):
         # Get the global coordinates of the top-left corner of object1
         object1_global_top_left = object1.mapToGlobal(object1.rect().topLeft())
