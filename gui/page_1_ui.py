@@ -72,7 +72,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Page 1", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Gambling desert", None))
         self.btn_gamenu.setText(QCoreApplication.translate("MainWindow", u"GAME MENU", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Welcome to GREAT AND THE FUNNIEST GAME THAT IS DEFINETLY NOT BORING", None))
         self.btn_rules.setText(QCoreApplication.translate("MainWindow", u"RULES", None))

@@ -1,6 +1,6 @@
-# By: <Your Name Here>
+# By: Mujibullah
 # Date: 2025-06-12
-# Program Details: <Program Description Here>
+# Program Details: Gambling Desert, Last project for Computer Science class
 
 import os, sys, random
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -20,7 +20,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.setupUi(self)
             self.setWindowTitle("Slot Machine")
             self.images = ['7.png', 'cherry.png', "lemon.png", 'robot.png',]
-            self.balance = 0
             self.btn_spin.clicked.connect(self.btn_spin_a)
             # Initialize spin timer
             self.spin_timer = QTimer()
@@ -38,8 +37,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         msg.setWindowTitle(title)
         msg.exec()
     def start_spin(self):
-        self.balance -= 10
-        self.lbl_balance.setText(f"Balance: ${self.balance}")
+        manager.screen3.balance -= 10
+        self.lbl_balance.setText(f"Balance: ${manager.screen3.balance}")
         self.spin_duration = 0
         self.spin_timer.start(100)  # Call spin_animation every 100ms
     def btn_spin_a(self):
@@ -58,10 +57,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if self.spin_duration >= 3000:  # 3 seconds
                 self.spin_timer.stop()
                 self.show_final_result()
+            if manager.screen3.balance <= 0:
+                manager.widget.setCurrentWidget(manager.screen3)
+                manager.widget.resize(1920, 1080)
+                
     def show_final_result(self):
         if self.spin1 == self.spin2 == self.spin3:
-            self.balance += 500
-            manager.screen3.lbl_balance.setText(f"Balance: ${self.balance}")
+            manager.screen3.balance += 500
+            manager.screen3.lbl_balance.setText(f"Balance: ${manager.screen3.balance}")
             self.message_box("WINNER", "WINNER")
             manager.widget.setCurrentWidget(manager.screen3)
             manager.widget.resize(1920, 1080)

@@ -1,6 +1,6 @@
-# By: <Your Name Here>
+# By: Mujibullah
 # Date: 2025-06-12
-# Program Details: <Program Description Here>
+# Program Details: Gambling Desert, Last project for Computer Science class
 
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -49,9 +49,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
          print("Player geometry:", self.lbl_player.geometry())
          print("Spin geometry:", self.lbl_spin.geometry())
          print("Current balance:", self.balance)
-        elif self.balance >= 500:
-            self.collision(self.lbl_player, self.lbl_spin)
-        elif self.collision(self.lbl_player, self.lbl_spin):
+
+        if self.collision(self.lbl_player, self.lbl_spin) and manager.screen3.balance >= 500:
             self.balance -= 300
             manager.screen5.lbl_balance.setText(f"Balance: ${self.balance}")
             self.lbl_balance.setText(f"Balance: ${self.balance}")
@@ -63,7 +62,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             print("Player geometry:", self.lbl_player.geometry())
             print("Spin geometry:", self.lbl_spin.geometry())
             print("Current balance:", self.balance)
-         
+        
+        if self.collision(self.lbl_player, self.lbl_slots) and manager.screen3.balance >= 2000:
+            manager.screen6.lbl_balance.setText(f"Balance: ${self.balance}")
+            manager.widget.setCurrentWidget(manager.screen6)
+            manager.widget.resize(1366, 786)
     def keyPressEvent(self, event):
         self.key_press.append(event.key())
     def keyReleaseEvent(self, event):

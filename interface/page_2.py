@@ -1,6 +1,6 @@
-# By: <Your Name Here>
+# By: Mujibullah
 # Date: 2025-06-12
-# Program Details: <Program Description Here>
+# Program Details: Gambling Desert, Last project for Computer Science class
 
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

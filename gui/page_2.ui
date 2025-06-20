@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1490</width>
-    <height>613</height>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,8 +38,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>140</y>
+      <x>0</x>
+      <y>70</y>
       <width>1211</width>
       <height>191</height>
      </rect>
@@ -50,29 +50,29 @@
      </font>
     </property>
     <property name="text">
-     <string>This game consists of 3+ levels. the first is _____________ 
- The second game is ____________________ 
- the third game is ______________________</string>
+     <string>This game consists of 3 levels. the first is whack a mole
+ The second game is spin machine
+ the third game is roulette</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>340</y>
-      <width>791</width>
-      <height>181</height>
+      <y>330</y>
+      <width>1451</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>29</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>For the ____ You have to do _______ 
- For _______ You have to do _____________- 
- and Finally ______, Your challenge is to_______</string>
+     <string>For the whack-a-mole You have to get 5 casino chips, and you would receive $250, the entrance is free
+ For spin machine You have to have $500 in your balance, or you can not enter, to enter the spin machine, you would spend $300, and when you win, you would recieve $500  
+ and Finally Roulette, Your challenge is to pick only three numbers, and bet as much as you want. If you win, you would recieve double of your bet money</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_main">

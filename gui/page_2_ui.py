@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1490, 613)
+        MainWindow.resize(1490, 618)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
@@ -34,15 +34,15 @@ class Ui_MainWindow(object):
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(10, 140, 1211, 191))
+        self.label_2.setGeometry(QRect(0, 70, 1211, 191))
         font1 = QFont()
         font1.setPointSize(27)
         self.label_2.setFont(font1)
         self.label_3 = QLabel(self.centralwidget)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(10, 340, 791, 181))
+        self.label_3.setGeometry(QRect(10, 330, 1451, 191))
         font2 = QFont()
-        font2.setPointSize(29)
+        font2.setPointSize(13)
         self.label_3.setFont(font2)
         self.btn_main = QPushButton(self.centralwidget)
         self.btn_main.setObjectName(u"btn_main")
@@ -58,12 +58,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Page 1", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hello and welcome to the game that was created by Mujibullah", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"This game consists of 3+ levels. the first is _____________ \n"
-" The second game is ____________________ \n"
-" the third game is ______________________", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"For the ____ You have to do _______ \n"
-" For _______ You have to do _____________- \n"
-" and Finally ______, Your challenge is to_______", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"This game consists of 3 levels. the first is whack a mole\n"
+" The second game is spin machine\n"
+" the third game is roulette", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"For the whack-a-mole You have to get 5 casino chips, and you would receive $250, the entrance is free\n"
+" For spin machine You have to have $500 in your balance, or you can not enter, to enter the spin machine, you would spend $300, and when you win, you would recieve $500  \n"
+" and Finally Roulette, Your challenge is to pick only three numbers, and bet as much as you want. If you win, you would recieve double of your bet money", None))
         self.btn_main.setText(QCoreApplication.translate("MainWindow", u"Main Menu", None))
     # retranslateUi
 

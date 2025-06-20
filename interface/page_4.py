@@ -1,6 +1,6 @@
-# By: <Your Name Here>
+# By: Mujibullah
 # Date: 2025-06-12
-# Program Details: <Program Description Here>
+# Program Details: Gambling Desert, Last project for Computer Science class
 
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -18,7 +18,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         with manager.image_gui_path():
             self.setupUi(self)
-            self.balance = 0
  # Initialize score and tries
         self.ppoint = 0
         self.tries = 0
@@ -73,8 +72,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_whack.setVisible(False)
 
         if self.ppoint >= self.max_points:
-            self.balance += 250
-            manager.screen3.lbl_balance.setText(f"Balance: ${self.balance}")
+            manager.screen3.balance += 250
+            manager.screen3.lbl_balance.setText(f"Balance: ${manager.screen3.balance}")
             self.timer.stop()
             self.btn_whack.setVisible(False)
             QMessageBox.information(self, "You Win!", "You won the game!")
