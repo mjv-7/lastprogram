@@ -25,8 +25,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer.start(5)
         self.key_press=[]
         self.speed=1
+        self.balance = 0
         self.walls = [self.lbl_w1,self.lbl_w2,self.lbl_w3,self.lbl_w4,self.lbl_w5,self.lbl_w6,self.lbl_w7,self.lbl_w8,self.lbl_w9]
-        
+        self.lbl_balance.setText(f"Balance: ${self.balance}")
     def btn_main_a(self):
         manager.widget.setCurrentWidget(manager.screen1)
         manager.widget.resize(960, 600)
@@ -44,6 +45,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
          manager.widget.resize(1280, 720)
          self.lbl_player.move(950, 990)
          self.key_press.clear()
+         print("Checking collision:", self.collision(self.lbl_player, self.lbl_spin))
+         print("Player geometry:", self.lbl_player.geometry())
+         print("Spin geometry:", self.lbl_spin.geometry())
+         print("Current balance:", self.balance)
+        elif self.balance >= 500:
+            self.collision(self.lbl_player, self.lbl_spin)
+        elif self.collision(self.lbl_player, self.lbl_spin):
+            self.balance -= 300
+            manager.screen5.lbl_balance.setText(f"Balance: ${self.balance}")
+            self.lbl_balance.setText(f"Balance: ${self.balance}")
+            manager.widget.setCurrentWidget(manager.screen5)
+            manager.widget.resize(1024, 1024)
+            self.lbl_player.move(950, 990)
+            self.key_press.clear()
+            print("Checking collision:", self.collision(self.lbl_player, self.lbl_spin))
+            print("Player geometry:", self.lbl_player.geometry())
+            print("Spin geometry:", self.lbl_spin.geometry())
+            print("Current balance:", self.balance)
          
     def keyPressEvent(self, event):
         self.key_press.append(event.key())

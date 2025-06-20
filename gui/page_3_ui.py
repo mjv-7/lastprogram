@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'page_3.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.9.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -64,10 +64,10 @@ class Ui_MainWindow(object):
         self.label_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_spin = QLabel(self.centralwidget)
         self.lbl_spin.setObjectName(u"lbl_spin")
-        self.lbl_spin.setGeometry(QRect(970, 220, 61, 21))
+        self.lbl_spin.setGeometry(QRect(1750, 520, 61, 51))
         self.lbl_slots = QLabel(self.centralwidget)
         self.lbl_slots.setObjectName(u"lbl_slots")
-        self.lbl_slots.setGeometry(QRect(1750, 520, 54, 51))
+        self.lbl_slots.setGeometry(QRect(970, 220, 54, 21))
         self.lbl_w1 = QLabel(self.centralwidget)
         self.lbl_w1.setObjectName(u"lbl_w1")
         self.lbl_w1.setGeometry(QRect(730, 370, 211, 61))
@@ -95,6 +95,16 @@ class Ui_MainWindow(object):
         self.lbl_w9 = QLabel(self.centralwidget)
         self.lbl_w9.setObjectName(u"lbl_w9")
         self.lbl_w9.setGeometry(QRect(1180, 230, 54, 51))
+        self.lbl_balance = QLabel(self.centralwidget)
+        self.lbl_balance.setObjectName(u"lbl_balance")
+        self.lbl_balance.setGeometry(QRect(130, 30, 341, 61))
+        font2 = QFont()
+        font2.setFamilies([u"MS Sans Serif"])
+        font2.setPointSize(30)
+        font2.setBold(False)
+        font2.setItalic(False)
+        font2.setUnderline(False)
+        self.lbl_balance.setFont(font2)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -123,5 +133,6 @@ class Ui_MainWindow(object):
         self.lbl_w5.setText("")
         self.lbl_w8.setText("")
         self.lbl_w9.setText("")
+        self.lbl_balance.setText(QCoreApplication.translate("MainWindow", u"BALANCE: ", None))
     # retranslateUi
 

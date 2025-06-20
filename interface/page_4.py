@@ -18,6 +18,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         with manager.image_gui_path():
             self.setupUi(self)
+            self.balance = 0
  # Initialize score and tries
         self.ppoint = 0
         self.tries = 0
@@ -72,6 +73,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_whack.setVisible(False)
 
         if self.ppoint >= self.max_points:
+            self.balance += 250
+            manager.screen3.lbl_balance.setText(f"Balance: ${self.balance}")
             self.timer.stop()
             self.btn_whack.setVisible(False)
             QMessageBox.information(self, "You Win!", "You won the game!")
